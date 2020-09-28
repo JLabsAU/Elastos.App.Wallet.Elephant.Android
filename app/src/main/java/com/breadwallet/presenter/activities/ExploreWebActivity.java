@@ -160,10 +160,11 @@ public class ExploreWebActivity extends BRActivity {
         mLoadingDialog = new LoadingDialog(this, R.style.progressDialog);
         mLoadingDialog.setCanceledOnTouchOutside(false);
 
+        String label = this.getResources().getString(R.string.multi_wallet_switch);
         if(WebviewScriptConfig.getInstance(this).network == WebviewScriptConfig.networkConnectByDapp.ethereumSideChain){
-            mSwitchNetwork.setText(R.string.multi_wallet_switch + ": Ethereum");
+            mSwitchNetwork.setText(label + ": Ethereum");
         }else{
-            mSwitchNetwork.setText(R.string.multi_wallet_switch + ": ELA Side Chain");
+            mSwitchNetwork.setText(label + ": ELA Side Chain");
         }
     }
 
@@ -303,14 +304,15 @@ public class ExploreWebActivity extends BRActivity {
                 mMenuLayout.setVisibility(View.GONE);
 
                 Context tempContext = ExploreWebActivity.this;
+                String label = tempContext.getResources().getString(R.string.multi_wallet_switch);
                 if(WebviewScriptConfig.getInstance(tempContext).network == WebviewScriptConfig.networkConnectByDapp.ethereumSideChain){
                     WebviewScriptConfig.getInstance(tempContext).switchNetwork(WebviewScriptConfig.networkConnectByDapp.ethereum);
-                    Toast.makeText(tempContext, R.string.multi_wallet_switch + " - Ethereum", Toast.LENGTH_SHORT).show();
-                    mSwitchNetwork.setText(R.string.multi_wallet_switch + ": ELA Side Chain");
+                    Toast.makeText(tempContext, label + " - Ethereum", Toast.LENGTH_SHORT).show();
+                    mSwitchNetwork.setText(label + ": ELA Side Chain");
                 }else{
                     WebviewScriptConfig.getInstance(tempContext).switchNetwork(WebviewScriptConfig.networkConnectByDapp.ethereumSideChain);
-                    Toast.makeText(tempContext, R.string.multi_wallet_switch + " - ELA Side Chain", Toast.LENGTH_SHORT).show();
-                    mSwitchNetwork.setText(R.string.multi_wallet_switch + ": Ethereum");
+                    Toast.makeText(tempContext, label + " - ELA Side Chain", Toast.LENGTH_SHORT).show();
+                    mSwitchNetwork.setText(label + ": Ethereum");
                 }
             }
         });
