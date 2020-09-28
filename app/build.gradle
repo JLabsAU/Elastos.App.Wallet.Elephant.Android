@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.elastos.wallet'
+        applicationId = 'app.elaphant.wallets'
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 91
