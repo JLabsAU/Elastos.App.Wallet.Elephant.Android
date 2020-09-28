@@ -168,7 +168,7 @@ public class ExploreWebActivity extends BRActivity {
     }
 
     private void checkFavoriteStatus(String url) {
-        SharedPreferences sp = getSharedPreferences("MyPublicPrefsFile", Context.MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("BrowserPrefs", Context.MODE_PRIVATE);
         Set<String> favorites = sp.getStringSet("favorites", null);
 
         if(favorites!=null && favorites.size()>0){
