@@ -32,7 +32,7 @@ public class WebviewScriptConfig{
     public WebviewScriptConfig(Context context){
         theContext = context;
         address = ElaSideEthereumWalletManager.getInstance(context).getAddress();
-        chainId = 1;
+        chainId = 20;
         rpcUrl = "https://escrpc.elaphant.app";
     }
 
@@ -46,7 +46,7 @@ public class WebviewScriptConfig{
     public void switchNetwork(networkConnectByDapp network){
         if(network == networkConnectByDapp.ethereumSideChain){
             address = ElaSideEthereumWalletManager.getInstance(theContext).getAddress();
-            chainId = 1;
+            chainId = 20;
             rpcUrl = "https://escrpc.elaphant.app";
         }else{
             address = WalletEthManager.getInstance(theContext).getAddress();
