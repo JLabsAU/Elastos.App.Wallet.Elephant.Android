@@ -31,6 +31,14 @@ JNIEXPORT jlong JNICALL Java_com_breadwallet_core_ethereum_BREthereumNetwork_jni
 JNIEXPORT jlong JNICALL Java_com_breadwallet_core_ethereum_BREthereumNetwork_jniGetRinkeby
   (JNIEnv *, jclass);
 
+/*
+ * Class:     com_breadwallet_core_ethereum_BREthereumNetwork
+ * Method:    jniGetRinkeby
+ * Signature: ()J
+ */
+JNIEXPORT jlong JNICALL Java_com_breadwallet_core_ethereum_BREthereumNetwork_jniGetEthsc
+        (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

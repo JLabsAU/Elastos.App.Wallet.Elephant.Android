@@ -159,7 +159,8 @@ public class ElaSideEthereumWalletManager extends BaseEthereumWalletManager impl
                     return null;
                 }
             }
-            mInstance = new ElaSideEthereumWalletManager(app, ethPubKey, BuildConfig.BITCOIN_TESTNET ? BREthereumNetwork.testnet : BREthereumNetwork.mainnet);
+//            mInstance = new ElaSideEthereumWalletManager(app, ethPubKey, BuildConfig.BITCOIN_TESTNET ? BREthereumNetwork.testnet : BREthereumNetwork.mainnet);
+            mInstance = new ElaSideEthereumWalletManager(app, ethPubKey, BuildConfig.BITCOIN_TESTNET ? BREthereumNetwork.testnet : BREthereumNetwork.ethsc);
 
         }
         return mInstance;

@@ -59,3 +59,14 @@ Java_com_breadwallet_core_ethereum_BREthereumNetwork_jniGetRinkeby
     return (jlong) ethereumRinkeby;
 }
 
+/*
+ * Class:     com_breadwallet_core_ethereum_BREthereumNetwork
+ * Method:    jniGetRinkeby
+ * Signature: ()J
+ */
+JNIEXPORT jlong JNICALL
+Java_com_breadwallet_core_ethereum_BREthereumNetwork_jniGetEthsc
+        (JNIEnv *env, jclass thisClass) {
+    return (jlong) ethereumSideChain;
+}
+

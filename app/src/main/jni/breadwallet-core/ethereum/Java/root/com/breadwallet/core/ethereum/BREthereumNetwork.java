@@ -50,4 +50,8 @@ public class BREthereumNetwork extends BRCoreJniReference {
             new BREthereumNetwork(jniGetRinkeby());
 
     private static native long jniGetRinkeby ();
+
+    public static BREthereumNetwork ethsc = new BREthereumNetwork(jniGetEthsc());
+
+    private static native long jniGetEthsc ();
 }

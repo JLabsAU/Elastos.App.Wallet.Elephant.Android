@@ -41,6 +41,7 @@ networkGetChainId (BREthereumNetwork network);
 extern const BREthereumNetwork ethereumMainnet;
 extern const BREthereumNetwork ethereumTestnet;
 extern const BREthereumNetwork ethereumRinkeby;
+extern const BREthereumNetwork ethereumSideChain;
 
 #ifdef __cplusplus
 }
